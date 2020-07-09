@@ -1,0 +1,7 @@
+type Query {
+  seeUser(id: String!): UserProfile!
+}
+
+type Query {
+  hello: String!
+}

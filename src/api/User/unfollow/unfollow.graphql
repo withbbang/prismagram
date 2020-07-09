@@ -1,0 +1,7 @@
+type Mutation {
+  unfollow(id: String!): Boolean!
+}
+
+type Query {
+  hello: String!
+}

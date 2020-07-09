@@ -1,0 +1,7 @@
+type Query {
+  me: UserProfile!
+}
+
+type Query {
+  hello: String!
+}

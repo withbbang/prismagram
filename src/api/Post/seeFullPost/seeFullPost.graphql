@@ -1,0 +1,7 @@
+type Query {
+  seeFullPost(id: String!): Post!
+}
+
+type Query {
+  hello: String!
+}

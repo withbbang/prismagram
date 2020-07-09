@@ -1,0 +1,7 @@
+type Mutation {
+  upload(caption: String!, files: [String!]!): Post!
+}
+
+type Query {
+  hello: String!
+}
