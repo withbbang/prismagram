@@ -1,14 +1,13 @@
-import { isAuthenticated } from "../../../middlewares";
 import { prisma } from "../../../../generated/prisma-client";
 
 export default {
   Mutation: {
     //deleteComment 만들기
-    addComment: async (_, args, { request }) => {
+    addComment: async (_, args, { request, isAuthenticated }) => {
       isAuthenticated(request);
       const { text, postId } = args;
       const { user } = request;
-      const comment = await prisma.createComment({
+      return prisma.createComment({
         user: {
           connect: {
             id: user.id,
@@ -21,7 +20,6 @@ export default {
         },
         text,
       });
-      return comment;
     },
   },
 };

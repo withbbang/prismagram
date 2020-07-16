@@ -1,5 +1,5 @@
 type Query {
-  me: UserProfile!
+  me: User!
 }
 
 type Query {
