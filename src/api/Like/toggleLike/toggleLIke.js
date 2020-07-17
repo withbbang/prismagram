@@ -5,7 +5,6 @@ export default {
   Mutation: {
     toggleLike: async (_, args, { request }) => {
       isAuthenticated(request);
-      console.log("request : ", request);
       const { postId } = args;
       const { user } = request;
       const filterOptions = {
