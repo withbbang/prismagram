@@ -10,10 +10,13 @@ type User {
   bio: String
   isFollowing: Boolean!
   posts: [Post!]!
+  postsCount: Int!
   likes: [Like!]!
   comments: [Comment!]!
   followers: [User!]!
+  followersCount: Int!
   following: [User!]!
+  followingCount: Int!
   rooms: [Room!]!
   loginSecret: String
   createdAt: String
