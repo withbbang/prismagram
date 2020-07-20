@@ -10,14 +10,13 @@ export default {
         throw Error("This name / email is already taken");
       }
 
-      await prisma.createUser({
+      return await prisma.createUser({
         name,
         email,
         firstName,
         lastName,
         bio,
       });
-      return true;
     },
   },
 };
