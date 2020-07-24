@@ -1,6 +1,6 @@
 type User {
   id: ID!
-  avatar: Avatar
+  avatar: String!
   isSelf: Boolean!
   name: String!
   email: String!
@@ -92,22 +92,6 @@ type FullPost {
   post: Post!
   comments: [Comment!]!
   likeCount: Int!
-  createdAt: String
-  updatedAt: String
-}
-
-scalar Upload
-
-type Query {
-  uploads: [Avatar]
-}
-
-type Avatar {
-  id: ID!
-  user: User!
-  fileName: String!
-  mimeType: String
-  encoding: String
   createdAt: String
   updatedAt: String
 }
