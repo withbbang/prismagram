@@ -28,8 +28,23 @@ export const uploadMiddleware = upload.single("file");
 
 export const uploadController = (req, res) => {
   const {
-    file: { location },
+    file: { location, key },
   } = req;
 
-  res.json({ location });
+  res.json({ location, key });
+};
+
+export const deletePhoto = (req, res) => {
+  const {
+    body: { Key },
+  } = req;
+  const param = { Bucket: "youngstagram", Key };
+  s3.deleteObject(param, (err, data) => {
+    if (err) {
+      console.log("Error : ", err);
+      res.end();
+    } else {
+      res.json(data);
+    }
+  });
 };

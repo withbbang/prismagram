@@ -1,6 +1,7 @@
 type User {
   id: ID!
   avatar: String!
+  avatarKey: String
   isSelf: Boolean!
   name: String!
   email: String!

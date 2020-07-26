@@ -1,6 +1,7 @@
 type User {
   id: ID! @id
   avatar: String! @default(value:"https://images-na.ssl-images-amazon.com/images/I/51e6kpkyuIL._AC_SX466_.jpg")
+  avatarKey: String
   name: String! @unique
   email:String! @unique
   firstName:String! @default(value:"")
