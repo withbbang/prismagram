@@ -42,7 +42,7 @@ export default {
 
         return true;
       } catch (e) {
-        console.log("error : ", e);
+        console.log("Error : ", e);
         return false;
       }
     },
