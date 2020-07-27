@@ -2,7 +2,7 @@
   "name": "prismagram",
   "version": "1.0.0",
   "engines": {
-    "yarn": "1.12.4"
+    "yarn": "1.22.4"
   },
   "description": "Instargram clone with Express, Prisma, React and ReactNative",
   "repository": "https://github.com/withbbang/prismagram",
